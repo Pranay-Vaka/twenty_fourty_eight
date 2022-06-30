@@ -1,0 +1,3 @@
+- The board is first made by two tiles being generated with either one having a 10% chance of being a 4 (independant to each other) and the rest of the chance is for a 2 tile
+- The user can go up, down, left, right using the arrow keys
+- The game ends when the entire of the board has been filled up and the user cannot move the board so to make the board simpler
