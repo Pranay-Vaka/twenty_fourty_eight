@@ -14,20 +14,26 @@ class Board():
         pass
         
     def left(self):
-        pass
+        coords = []
+        for y in range(0, 3):
+            for x in range(1, 3):
+                if self.board[x][y] == self.board[x - 1][y] and self.board[x][y] != "-" and [x][y] not in coords:
+                    coords.append([x - 1, y])
 
     def right(self):
         coords = []
         for y in range(0, 3):
             for x in range(0, 2):
-                if self.board[x][y] == self.board[x + 1][y] and self.board[x][y] != "-":
-                    coords.append([x, y])
-    
-        
+                if self.board[x][y] == self.board[x + 1][y] and self.board[x][y] != "-" and [x, y] not in coords:
+                    coords.append([x + 1, y])
 
+        for i in coords:
+            if coords
+    
     def up(self):
         pass
 
     def down(self):
         pass
 
+    
