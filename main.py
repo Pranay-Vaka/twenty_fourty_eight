@@ -17,21 +17,35 @@ class Board():
         coords = []
         for y in range(0, 3):
             for x in range(1, 3):
-                if self.board[x][y] == self.board[x - 1][y] and self.board[x][y] != "-" and [x][y] not in coords:
+                if self.board[y][x] == self.board[y][x - 1] and self.board[y][x] != "-" and [y][x] not in coords:
                     coords.append([x - 1, y])
+        
+        for i in coords:
+            self.board[i[1]][i[0] + 1] = "-"
+            self.board[i[1]][i[0]] *= 2
 
+    
     def right(self):
         coords = []
         for y in range(0, 3):
             for x in range(0, 2):
-                if self.board[x][y] == self.board[x + 1][y] and self.board[x][y] != "-" and [x, y] not in coords:
+                if self.board[y][x] == self.board[y][x + 1] and self.board[y][x] != "-" and [y, x] not in coords:
                     coords.append([x + 1, y])
 
         for i in coords:
-            if coords
+            self.board[i[1]][i[0] - 1] = "-"
+            self.board[i[1]][i[0]] *= 2
     
     def up(self):
-        pass
+        coords = []
+        for y in range(1, 3):
+            for x in range(0 ,3):
+                if self.board[y][x] == self.board[y + 1][x] and self.board[y][x] != "-" and [y, x] not in coords:
+                    coords.append([y + 1, x])
+
+        for i in coords:
+            self.board[i[1] - 1][i[0]] = "-"
+            self.board[i[1]][i[0]] *= 2
 
     def down(self):
         pass
